@@ -1,0 +1,23 @@
+{
+  "name": "arbor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd proj_backend && yarn start\" \"cd proj_frontend && yarn start\" " 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsanket16/arbor.git"
+  },
+  "author": "bsankt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsanket16/arbor/issues"
+  },
+  "homepage": "https://github.com/bsanket16/arbor#readme",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
