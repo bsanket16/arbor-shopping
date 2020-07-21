@@ -1,0 +1,28 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  margin-top: 150px;
+  box-sizing: border-box;
+  background: #343a40;
+}
+
+/* Login Sign up Page */
+
+.not-signed-up {
+  background-color: #56bd69;
+  min-height: 30em;
+  margin: -1px;
+}
+
+a, a:hover {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 38em;
+}
