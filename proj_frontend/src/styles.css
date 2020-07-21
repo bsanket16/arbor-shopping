@@ -16,6 +16,7 @@ body {
   background-color: #56bd69;
   min-height: 30em;
   margin: -1px;
+  border-radius: 4px;
 }
 
 a, a:hover {
