@@ -28,12 +28,12 @@ const Menu = ({ history }) => (
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link style={currentTab(history, '/cart')}  className='nav-link' to='/cart'>
+                        <Link style={currentTab(history, '/a')}  className='nav-link' to='/'>
                             Pricing    
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link style={currentTab(history, '/cart')}  className='nav-link' to='/cart'>
+                        <Link style={currentTab(history, '/b')}  className='nav-link' to='/'>
                             Blog    
                         </Link>
                     </li>
@@ -43,7 +43,7 @@ const Menu = ({ history }) => (
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link style={currentTab(history, '/contact')}  className='nav-link' to='/contact'>
+                        <Link style={currentTab(history, '/c')}  className='nav-link' to='/'>
                             Contact
                         </Link>
                     </li>

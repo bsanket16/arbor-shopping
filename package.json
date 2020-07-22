@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd proj_backend && yarn start\" \"cd proj_frontend && yarn start\" " 
+    "start": "concurrently \"cd proj_backend && yarn start\" \"cd proj_frontend && yarn start\" "
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/bsanket16/arbor#readme",
   "dependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "prop-types": "^15.7.2",
+    "react-animation-components": "^3.0.0",
+    "react-transition-group": "^4.4.1"
   }
 }
