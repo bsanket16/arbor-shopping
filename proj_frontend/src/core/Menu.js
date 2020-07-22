@@ -40,16 +40,22 @@ const Menu = ({ history }) => (
                             Admin
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/signup')}  className='nav-link' to='/signup'>
-                            Signup
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/login')}  className='nav-link' to='/login'>
-                            Login
-                        </Link>
-                    </li>                    
+
+                    {!isAuthenticated() && (
+                        <>
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/signup')}  className='nav-link' to='/signup'>
+                                    Signup
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/login')}  className='nav-link' to='/login'>
+                                    Login
+                                </Link>
+                            </li>    
+                        </>
+                    )}                
 
                     {isAuthenticated() && (
                         <li className="nav-item">
