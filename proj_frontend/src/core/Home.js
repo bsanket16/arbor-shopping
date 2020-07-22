@@ -10,7 +10,12 @@ export default function Home() {
     console.log('API IS', API)
 
     return (
-        <Base title='Arbor.' description='Planting is a treemendous experience'>
-        </Base>
+        
+        <>
+            <img src="/logo.png" alt="" className='logo mb-4' width='75' height='75'/>
+
+            <Base title='Arbor.' description='[ Planting is a Treemendous Experience ]'>
+            </Base>
+        </>
     )
 }

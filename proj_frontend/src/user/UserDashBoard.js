@@ -3,9 +3,12 @@ import Base from '../core/Base'
 
 const UserDashBoard = () => {
     return (
-        <Base title='User Dashboard'>
-            <h1>This is user dashboard page</h1>
-        </Base>
+        <>
+            <img src="/logo.png" alt="" className='logo mb-4' width='75' height='75'/>
+            
+            <Base title='Dashboard'>
+            </Base>
+        </>
     )
 }
 

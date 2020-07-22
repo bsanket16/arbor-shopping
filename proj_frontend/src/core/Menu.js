@@ -16,7 +16,9 @@ const Menu = ({ history }) => (
         <nav className="navbar navbar-dark fixed-top bg-dark text-white">
             <div className="container">
                 <span className="navbar-brand">
+                    <Link to='/' className='text-white'>
                         Arbor.
+                    </Link>
                 </span>
 
                 <ul className="nav bg-dark">
@@ -27,21 +29,31 @@ const Menu = ({ history }) => (
                     </li>
                     <li className="nav-item">
                         <Link style={currentTab(history, '/cart')}  className='nav-link' to='/cart'>
-                            Cart
+                            Pricing    
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link style={currentTab(history, '/cart')}  className='nav-link' to='/cart'>
+                            Blog    
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
-                            U. Dashboard
+                            Dashboard
                         </Link>
                     </li>
                     <li className="nav-item">
+                        <Link style={currentTab(history, '/contact')}  className='nav-link' to='/contact'>
+                            Contact
+                        </Link>
+                    </li>
+                    {/* <li className="nav-item">
                         <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
                             A. Dashboard
                         </Link>
-                    </li>
+                    </li> */}
 
-                    {!isAuthenticated() && (
+                    {/* {!isAuthenticated() && (
                         <>
                             <li className="nav-item">
                                 <Link style={currentTab(history, '/signup')}  className='nav-link' to='/signup'>
@@ -55,11 +67,11 @@ const Menu = ({ history }) => (
                                 </Link>
                             </li>    
                         </>
-                    )}                
+                    )}                 */}
 
                     {isAuthenticated() && (
                         <li className="nav-item">
-                            <span className='nav-link text-warning' onClick={() => {
+                            <span className='nav-link' onClick={() => {
                                 logout(() => {
                                     history.push('/')
                                 })
