@@ -32,12 +32,12 @@ const Menu = ({ history }) => (
                     </li>
                     <li className="nav-item">
                         <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
-                            Dashboard
+                            U. Dashboard
                         </Link>
                     </li>
                     <li className="nav-item">
                         <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
-                            Admin
+                            A. Dashboard
                         </Link>
                     </li>
 
