@@ -43,7 +43,7 @@ const Signup = () => {
         return (
             <>
                 <div className="container alert alert-success" style={{display: success ? "" : "none"}}>
-                    New Account Created.
+                    New Account Created
                 </div>
             </>
         )
@@ -72,7 +72,7 @@ const Signup = () => {
                             <form className="form-signup">
                             <h1 className='display-4 mt-3 mb-5 text-dark text-center'>Signup</h1>
 
-                                <div className="form-label-group shadow-sm rounded ">
+                                <div className="form-label-group shadow-sm rounded">
                                     <input type="name" id="inputName" className="form-control" placeholder='Name' 
                                     required autoFocus onChange={handleChange("username")} autoComplete="new-name" value= { username } />
                                     <label htmlFor="inputName">Username</label>

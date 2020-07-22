@@ -34,22 +34,22 @@ exports.login = (req, res) => {
 
     const {email, password} = req.body
 
-    // if(!errors.isEmpty()){
-    //     return res.status(422).json({
-    //         error : `${errors.array()[0].param} ${errors.array()[0].msg}`
-    //     })
-    // }
+    if(!errors.isEmpty()){
+        return res.status(422).json({
+            error : `${errors.array()[0].msg}`
+        })
+    }
 
     User.findOne({ email }, (err, user) => {
         if(err || !user){
             return res.status(400).json({
-                error : 'email does not exist'
+                error : 'Email does not exist'
             })
         }
 
         if(!user.authenticate(password))  {
             return res.status(401).json({
-                error : 'incorrect password'
+                error : 'Incorrect password'
             })
         }
 
@@ -60,8 +60,8 @@ exports.login = (req, res) => {
         res.cookie('token', token, {expire: new Date() + 9999})
 
         //response to frontend
-        const {_id, name, email, role} = user
-        return res.json({token, user: {_id, name, email, role}})
+        const {_id, username, email, role} = user
+        return res.json({token, user: {_id, username, email, role}})
 
     })
 
