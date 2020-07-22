@@ -2,8 +2,8 @@ import React from 'react'
 import Menu from './Menu'
 
 const Base = ({
-    title= 'My Title',
-    description= 'My description',
+    title= '',
+    description= '',
     className= 'bg-dark text-white p-4',
     children
 }) => (
@@ -21,9 +21,9 @@ const Base = ({
             <div className={className}> {children} </div>
         </div>
 
-        <footer className='footer bg-dark mt-auto py-3'>
+        {/* <footer className='footer bg-dark mt-auto py-3'>
             <p className="mt-5 mb-3 text-center text-muted">&copy;Arbor.</p>
-        </footer>
+        </footer> */}
     </>
 )
 
