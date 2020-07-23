@@ -1,6 +1,6 @@
-/* ::selection {
+::selection {
     background-color: #a6ffb6;
-} */
+}
 .navbar-brand, .display-4 {
     font-family: Montserrat;
     letter-spacing: 0.03em;
@@ -121,4 +121,25 @@
     .form-label-group input:-ms-input-placeholder {
         color: #777;
     }
+}
+
+.btn-outline-light {
+    color: white;
+    display: block;
+    margin: 1.3rem 5rem 5rem 4.9rem;
+    font-family: montserrat;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 1.5px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-outline-light:focus {
+    color: #3F8838;
+    background-color: #FFFFFF;
+}
+
+.btn-outline-light:hover {
+    color: #3F8838;
 }

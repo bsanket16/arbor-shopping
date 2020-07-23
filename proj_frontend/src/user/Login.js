@@ -6,8 +6,8 @@ import { login, authenticate, isAuthenticated} from '../auth/helper';
 const Login = () => {
 
     const [ values, setValues ] = useState({
-        email: 'sanket@gmail.com',
-        password: 'sanket',
+        email: '',
+        password: '',
         error: '',
         loading: false,
         didRedirect: false
@@ -111,8 +111,17 @@ const Login = () => {
                             </form>
                         </div>
 
-                        <div className="col-4 ml-auto">
-                            <div className="not-signed-up"></div>
+                        <div className="col-4 ml-auto not-signed-up bg-success">
+                            <div className="mt-4">
+                                <p className="sign-side-text text-white text-center mb-1">New Here?</p>
+                                <p className="sign-side-text-2 text-white text-center mb-4">Join now & start exploring</p>
+                                <Link to='/signup'><button type="button" className="btn btn-outline-light"> Sign Up </button></Link>
+                                <div className="icons mb-4">
+                                    <i className="fa fa-facebook-square fa-lg text-white mr-3"></i>
+                                    <i className="fa fa-github fa-lg text-white mr-3"></i>
+                                    <i className="fa fa-linkedin-square fa-lg text-white mr-3"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     </div>

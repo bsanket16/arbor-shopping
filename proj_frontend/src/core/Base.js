@@ -16,10 +16,11 @@ const Base = ({
                 in
                 transformProps={{
                     exitTransform: 'translateY(20px)',
-                    duration: 500
+                    duration: 550
                 }}
                 fadeProps={{
                     enterOpacity: 1,
+                    exitOpacity:0.1
                 }} in>
 
                     <img src="/logo.png" alt="" className='logo mb-4' width='75' height='75'/>
@@ -29,7 +30,7 @@ const Base = ({
             <FadeTransform
                 in
                 transformProps={{
-                    exitTransform: 'translateY(5px)',
+                    exitTransform: 'translateY(4px)',
                     duration: 1000
                 }}
                 fadeProps={{

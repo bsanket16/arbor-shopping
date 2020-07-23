@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Menu from '../core/Menu'
 import { signup } from '../auth/helper';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -98,8 +99,19 @@ const Signup = () => {
                             </form>
                         </div>
 
-                        <div className="col-4 my-0 p-0 mr-auto">
-                            <div className="not-signed-up"></div>
+                        <div className="col-4 my-0 p-0 mr-auto ">
+                            <div className="not-signed-ups rounded bg-success">
+                            <div className="mt-4">
+                                <p className="sign-side-text text-white text-center mb-2">Already<br />Signed Up?</p>
+                                <p className="sign-side-text-2 text-white text-center mb-4">Go to your dashboard</p>
+                                <Link to='/login'><button type="button" className="btn btn-outline-light"> Log In </button></Link>
+                                <div className="icons-signup mb-4">
+                                    <i class="fa fa-facebook-square fa-lg text-white mr-2 ml-2"></i>
+                                    <i class="fa fa-github fa-lg text-white mr-2 ml-2"></i>
+                                    <i class="fa fa-linkedin-square fa-lg text-white mr-2 ml-2"></i>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
                     </div>

@@ -13,10 +13,25 @@ body {
 /* Login Sign up Page */
 
 .not-signed-up {
-  background-color: #56bd69;
+  background-color: #3F8838;
   min-height: 30em;
   margin: -1px;
+  width: 25rem;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-signed-ups {
+  background-color: #3F8838;
+  min-height: 30em;
+  width: 25rem;
+  margin: -1px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a, a:hover {
@@ -34,4 +49,34 @@ a, a:hover {
 .logo {
   display: block;
   margin: 17em auto 00em;
+}
+
+.sign-side-text {
+  font-family: montserrat;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 0.1rem;
+}
+
+.sign-side-text-2 {
+  font-family: montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+}
+
+.icons{
+  position: absolute;
+  bottom: 0 ;
+  left: 39%;
+}
+
+.icons-signup {
+  position: absolute;
+  bottom: 0;
+  left: 39%;
+}
+
+.fa {
+  cursor: pointer;
 }

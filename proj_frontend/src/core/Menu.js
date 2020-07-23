@@ -13,7 +13,7 @@ const currentTab = (history, path) => {
 
 const Menu = ({ history }) => (
     <>
-        <nav className="navbar navbar-dark fixed-top bg-dark text-white">
+        <nav className="navbar navbar-dark fixed-top bg-dark text-white shadow-sm">
             <div className="container">
                 <span className="navbar-brand">
                     <Link to='/' className='text-white'>
@@ -67,7 +67,7 @@ const Menu = ({ history }) => (
                                 </Link>
                             </li>    
                         </>
-                    )}                 */}
+                    )}  */}
 
                     {isAuthenticated() && (
                         <li className="nav-item">
