@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/bsanket16/arbor#readme",
   "dependencies": {
-    "concurrently": "^5.2.0",
-    "prop-types": "^15.7.2",
-    "react-animation-components": "^3.0.0",
-    "react-transition-group": "^4.4.1"
+    "concurrently": "^5.2.0"
   }
 }
