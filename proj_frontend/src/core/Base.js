@@ -21,7 +21,7 @@ const Base = ({
                 fadeProps={{
                     enterOpacity: 1,
                     exitOpacity:0.1
-                }} in>
+                }}>
 
                     <img src="/logo.png" alt="" className='logo mb-4' width='75' height='75'/>
 
@@ -35,7 +35,7 @@ const Base = ({
                 }}
                 fadeProps={{
                     enterOpacity: 1,
-                }} in>
+                }} >
 
                      {/* <div className='jumbotron bg-dark text-white text-center'> */}
                     <h1 className='display-4 text-white text-center mb-3'>{ title }</h1>

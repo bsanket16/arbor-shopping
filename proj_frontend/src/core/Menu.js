@@ -22,36 +22,68 @@ const Menu = ({ history }) => (
                 </span>
 
                 <ul className="nav bg-dark">
+                    
                     <li className="nav-item">
                         <Link style={currentTab(history, '/')} className='nav-link' to='/'>
                             Home
                         </Link>
                     </li>
+
                     <li className="nav-item">
                         <Link style={currentTab(history, '/a')}  className='nav-link' to='/'>
                             Pricing    
                         </Link>
                     </li>
+
                     <li className="nav-item">
                         <Link style={currentTab(history, '/b')}  className='nav-link' to='/'>
                             Blog    
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
-                            Dashboard
-                        </Link>
-                    </li>
+
+
+
+
+                    {!isAuthenticated() && (
+                        <li className="nav-item">
+                            <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
+                                Dashboard
+                            </Link>
+                        </li>
+                    )}
+
+                    {isAuthenticated() && isAuthenticated().user.role === 0 && (
+                        <li className="nav-item">
+                            <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
+                                Dashboard
+                            </Link>
+                        </li>
+                    )}
+
+                    {isAuthenticated() && isAuthenticated().user.role === 1 && (
+                        <li className="nav-item">
+                            <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
+                                Dashboard
+                            </Link>
+                        </li>
+                    )}
+
+
+
                     <li className="nav-item">
                         <Link style={currentTab(history, '/c')}  className='nav-link' to='/'>
                             Contact
                         </Link>
                     </li>
+
+                    
                     {/* <li className="nav-item">
                         <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
                             A. Dashboard
                         </Link>
                     </li> */}
+
+                    {/* Signup & Login Routes */}
 
                     {/* {!isAuthenticated() && (
                         <>
