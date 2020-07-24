@@ -1,7 +1,7 @@
 # Arbor.
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/66514052/88294018-5d374080-cd19-11ea-8104-4ec298030396.gif">
+  <img src="https://user-images.githubusercontent.com/66514052/88294018-5d374080-cd19-11ea-8104-4ec298030396.gif">
 </p>
 
 ## Installation
