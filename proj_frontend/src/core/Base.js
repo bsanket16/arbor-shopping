@@ -45,10 +45,6 @@ const Base = ({
             </FadeTransform>
 
         </>
-
-        {/* <footer className='footer bg-dark mt-auto py-3'>
-            <p className="mt-5 mb-3 text-center text-muted">&copy;Arbor.</p>
-        </footer> */}
     </>
 )
 

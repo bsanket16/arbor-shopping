@@ -43,7 +43,7 @@ const Signup = () => {
     const successMsg = () => {
         return (
             <>
-                <div className="container alert alert-success" style={{display: success ? "" : "none"}}>
+                <div className="container alert alert-success text-center" style={{display: success ? "" : "none"}}>
                     New Account Created
                 </div>
             </>
@@ -52,7 +52,7 @@ const Signup = () => {
 
     const errorMsg = () => {
         return (
-                <div className="container alert alert-danger" style={{display: error ? "" : "none"}}>
+                <div className="container alert alert-danger text-center" style={{display: error ? "" : "none"}}>
                     { error }
                 </div>
         )

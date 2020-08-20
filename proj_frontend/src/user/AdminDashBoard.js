@@ -1,10 +1,11 @@
 import React from 'react'
-import Base from '../core/Base'
+import Menu from '../core/Menu'
 
 const AdminDashBoard = () => {
     return (
-        <Base title='Admin Dashboard'>
-        </Base>
+        <>
+            <Menu />
+        </>
     )
 }
 

@@ -1,11 +1,10 @@
 import React from 'react'
-import Base from '../core/Base'
+import Menu from '../core/Menu'
 
 const UserDashBoard = () => {
     return (
         <>            
-            <Base title='Dashboard'>
-            </Base>
+            <Menu />
         </>
     )
 }

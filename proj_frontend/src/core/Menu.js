@@ -4,113 +4,98 @@ import { logout, isAuthenticated } from '../auth/helper/index'
 
 const currentTab = (history, path) => {
     if(history.location.pathname === path){
-        return { color : '#2ecc72' }
+        return { color : '#A9A9A9' }
     }
     else{
-        return { color : '#e3e3e3' }
+        return { color : '#A9A9A9' }
     }
 }
 
 const Menu = ({ history }) => (
     <>
-        <nav className="navbar navbar-dark fixed-top bg-dark text-white shadow-sm">
-            <div className="container">
+        <nav className="navbar navbar-light fixed-top bg-white shadow-sm">
+            <div className="container-fluid">
                 <span className="navbar-brand">
-                    <Link to='/' className='text-white'>
+                    <Link to='/' className='text-dark'>
                         Arbor.
                     </Link>
                 </span>
 
-                <ul className="nav bg-dark">
-                    
+                <ul className="nav">
+
                     <li className="nav-item">
                         <Link style={currentTab(history, '/')} className='nav-link' to='/'>
-                            Home
+                            <i className="las la-seedling la-lg"></i>    
                         </Link>
                     </li>
-
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/a')}  className='nav-link' to='/'>
-                            Pricing    
-                        </Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/b')}  className='nav-link' to='/'>
-                            Blog    
-                        </Link>
-                    </li>
-
-
-
 
                     {!isAuthenticated() && (
-                        <li className="nav-item">
-                            <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
-                                Dashboard
-                            </Link>
-                        </li>
-                    )}
-
-                    {isAuthenticated() && isAuthenticated().user.role === 0 && (
-                        <li className="nav-item">
-                            <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
-                                Dashboard
-                            </Link>
-                        </li>
-                    )}
-
-                    {isAuthenticated() && isAuthenticated().user.role === 1 && (
-                        <li className="nav-item">
-                            <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
-                                Dashboard
-                            </Link>
-                        </li>
-                    )}
-
-
-
-                    <li className="nav-item">
-                        <Link style={currentTab(history, '/c')}  className='nav-link' to='/'>
-                            Contact
-                        </Link>
-                    </li>
-
-                    
-                    {/* <li className="nav-item">
-                        <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
-                            A. Dashboard
-                        </Link>
-                    </li> */}
-
-                    {/* Signup & Login Routes */}
-
-                    {/* {!isAuthenticated() && (
                         <>
                             <li className="nav-item">
-                                <Link style={currentTab(history, '/signup')}  className='nav-link' to='/signup'>
-                                    Signup
+                                <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
+                                    <i className="las la-user la-lg"></i>   
                                 </Link>
                             </li>
 
                             <li className="nav-item">
                                 <Link style={currentTab(history, '/login')}  className='nav-link' to='/login'>
-                                    Login
+                                    <i className="las la-sign-in-alt la-lg"></i>  
                                 </Link>
-                            </li>    
+                            </li>
                         </>
-                    )}  */}
+                    )}
 
-                    {isAuthenticated() && (
-                        <li className="nav-item">
-                            <span className='nav-link' onClick={() => {
-                                logout(() => {
-                                    history.push('/')
-                                })
-                            }}> 
-                                Logout
-                            </span>
-                        </li>
+                    {isAuthenticated() && isAuthenticated().user.role === 0 && (
+                        <>
+
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/')}  className='nav-link' to='/'>
+                                    <i className="las la-shopping-bag la-lg"></i>
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/user/dashboard')}  className='nav-link' to='/user/dashboard'>
+                                    <i className="las la-user la-lg"></i>   
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <span className='nav-link' style={{color:'#A9A9A9', cursor:'pointer'}} onClick={() => {
+                                    logout(() => {
+                                        history.push('/')
+                                    })
+                                }}> 
+                                    <i className="las la-sign-out-alt la-lg"></i> 
+                                </span>
+                            </li>
+                        </>
+                    )}
+
+                    {isAuthenticated() && isAuthenticated().user.role === 1 && (
+                        <>
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/')} className='nav-link' to='/'>
+                                    <i className="las la-comment-alt la-lg"></i>    
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link style={currentTab(history, '/admin/dashboard')}  className='nav-link' to='/admin/dashboard'>
+                                    <i className="las la-user la-lg"></i>
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <span className='nav-link' style={{color:'#A9A9A9', cursor:'pointer'}} onClick={() => {
+                                    logout(() => {
+                                        history.push('/')
+                                    })
+                                }}> 
+                                    <i className="las la-sign-out-alt la-lg"></i> 
+                                </span>
+                            </li>
+                        </>
                     )}
 
                 </ul> 

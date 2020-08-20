@@ -71,7 +71,7 @@ const Login = () => {
 
     const errorMsg = () => {
         return (
-                <div className="container alert alert-danger" style={{display: error ? "" : "none"}}>
+                <div className="container alert alert-danger text-center" style={{display: error ? "" : "none"}}>
                     { error }
                 </div>
         )
