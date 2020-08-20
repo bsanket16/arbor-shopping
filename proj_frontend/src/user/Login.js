@@ -84,7 +84,7 @@ const Login = () => {
 
                 <div className="container">
 
-                    <div className="card mt-5">
+                    <div className="card mt-5 shadow-sm">
                         <div className="card-body m-0 p-0">
                         <div className="row no-gutters">
                         <div className="col-4 offset-2 my-auto">
