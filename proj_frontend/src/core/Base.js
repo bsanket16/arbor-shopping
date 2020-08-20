@@ -23,7 +23,7 @@ const Base = ({
                     exitOpacity:0.1
                 }}>
 
-                    <img src="/logo.png" alt="" className='logo mb-4' width='75' height='75'/>
+                    <img src="/favicon.ico" alt="" className='logo mb-4' width='75' height='75'/>
 
         </FadeTransform>
 
