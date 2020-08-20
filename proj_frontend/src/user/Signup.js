@@ -65,7 +65,7 @@ const Signup = () => {
 
                 <div className="container">
 
-                    <div className="card mt-5">
+                    <div className="card mt-5 shadow-sm">
                         <div className="card-body m-0 p-0">
                         <div className="row no-gutters">
                         
